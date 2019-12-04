@@ -12,8 +12,7 @@ ini_set('memory_limit', '-1');
 
 echo 'Loading data into memory ...' . PHP_EOL;
 
-$reader = Reader::createFromPath(__DIR__ . '/train.csv')
-    ->setDelimiter(',')->setEnclosure('"')->setHeaderOffset(0);
+$reader = Reader::createFromPath(__DIR__ . '/train.csv')->setHeaderOffset(0);
 
 $samples = $reader->getRecords([
     'cluster_id', 'game_mode', 'game_type', 'hero_1', 'hero_2', 'hero_3',
