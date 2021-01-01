@@ -3,7 +3,7 @@
     "type": "project",
     "description": "Build a classifier to predict the outcome of Dota 2 games with the Naive Bayes algorithm and the results of 102,944 sample games.",
     "homepage": "https://github.com/RubixML/Dota2",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "keywords": [
         "classification", "cross validation", "dataset", "data science", "dota", "dota 2",
         "example project", "game outcome prediciton", "machine learning", "ml", "naive bayes",
@@ -12,14 +12,13 @@
     "authors": [
         {
             "name": "Andrew DalPino",
-            "email": "me@andrewdalpino.com",
-            "homepage": "https://andrewdalpino.com",
+            "homepage": "https://github.com/andrewdalpino",
             "role": "Lead Engineer"
         }
     ],
     "require": {
         "php": ">=7.2",
-        "rubix/ml": "^0.1.0"
+        "rubix/ml": "^0.3.0"
     },
     "scripts": {
         "train": "@php train.php",
