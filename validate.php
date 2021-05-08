@@ -16,7 +16,7 @@ echo 'Loading data into memory ...' . PHP_EOL;
 
 $dataset = Labeled::fromIterator(new CSV('test.csv', true));
 
-$estimator = PersistentModel::load(new Filesystem('dota.model'));
+$estimator = PersistentModel::load(new Filesystem('dota.rbx'));
 
 echo 'Making predictions ...' . PHP_EOL;
 
@@ -31,6 +31,6 @@ $results = $report->generate($predictions, $dataset->labels());
 
 echo $results;
 
-$results->toJSON()->write('report.json');
+$results->toJSON()->saveTo(new Filesystem('report.json'));
 
 echo 'Report saved to report.json' . PHP_EOL;

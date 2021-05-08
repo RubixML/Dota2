@@ -14,7 +14,7 @@ echo 'Loading data into memory ...' . PHP_EOL;
 
 $dataset = Labeled::fromIterator(new CSV('train.csv', true));
 
-$estimator = new PersistentModel(new NaiveBayes(2.0), new Filesystem('dota.model'));
+$estimator = new PersistentModel(new NaiveBayes(), new Filesystem('dota.rbx'));
 
 echo 'Training ...' .  PHP_EOL;
 
