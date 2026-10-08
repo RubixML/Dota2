@@ -16,7 +16,7 @@ echo 'Loading data into memory ...' . PHP_EOL;
 
 $dataset = Labeled::fromIterator(new CSV('test.csv', true));
 
-$estimator = PersistentModel::load(new Filesystem('dota.rbx'));
+$estimator = PersistentModel::load(new Filesystem('model.rbx'));
 
 echo 'Making predictions ...' . PHP_EOL;
 
